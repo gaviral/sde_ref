@@ -1,4 +1,5 @@
 import Editor from '@monaco-editor/react';
+import type { Monaco } from '@monaco-editor/react';
 
 interface CodeEditorProps {
     defaultValue?: string;
@@ -18,10 +19,10 @@ interface CodeEditorProps {
     width?: string | number;
     className?: string;
     wrapperProps?: object;
-    beforeMount?: (monaco: any) => void;
-    onMount?: (editor: any, monaco: any) => void;
-    onChange?: (value: string | undefined, event: any) => void;
-    onValidate?: (markers: any[]) => void;
+    beforeMount?: (monaco: Monaco) => void;
+    onMount?: (editor: unknown, monaco: Monaco) => void;
+    onChange?: (value: string | undefined, event: unknown) => void;
+    onValidate?: (markers: unknown[]) => void;
     containerStyle?: React.CSSProperties;
 }
 
